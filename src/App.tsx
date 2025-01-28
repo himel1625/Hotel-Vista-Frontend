@@ -1,9 +1,16 @@
-import Navbar from './Components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Layouts/Layout';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
-      <Navbar />
+      <Routes>
+        <Route path='/' element={<Layout />} />
+        {/* <Route path='dashboard' element={<Dashboard />}>
+          <Route index element={<RecentActivity />} />
+          <Route path='project/:id' element={<Project />} />
+        </Route> */}
+      </Routes>
     </div>
   );
 };
